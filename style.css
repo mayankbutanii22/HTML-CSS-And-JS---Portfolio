@@ -1,0 +1,165 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+/* Profile Image in Hero */
+.profile-img-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ffe7;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #004e92, #000428);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero span {
+  color: #00ffe7;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #00ffe7;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #004e92;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-list li {
+  background: #004e92;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #004e92;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #002d62;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000428;
+  color: white;
+}
+/* Animation Styles */
+section,
+.project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.show,
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
